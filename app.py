@@ -117,7 +117,7 @@ if aba == "Diagnóstico":
         entradas.to_csv("entradas.csv", index=False)
 
         # --- Gráfico com dados acumulados de diagnósticos ---
-        st.subheader("Diagnósticos Acumulados (Random Forest)")
+        st.subheader("Diagnósticos Acumulados")
         grafico_data = entradas["Diabetes_RF"].value_counts().reindex([0, 1], fill_value=0)
         grafico_data.index = ["Sem Diabetes", "Com Diabetes"]
         st.bar_chart(grafico_data)
